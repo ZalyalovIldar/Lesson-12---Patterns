@@ -38,6 +38,9 @@ class SearchAssembly {
                 
         router.view = view
         
+        placesService.session = URLSession.shared
+        logoutService.userDefaults = UserDefaults.standard
+        
         return view
     }
 }

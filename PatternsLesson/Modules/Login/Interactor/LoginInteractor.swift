@@ -16,7 +16,7 @@ class LoginInteractor: LoginInteractorInput {
     weak var presenter: LoginInteractorOutput!
     
     func checkCredentials(dto: CredentialsDto) {
-        presenter.didCheckedCredentials(success: loginService.login(dto: dto))
+        presenter.didCheckedCredentials(success: loginService.login(credentials: dto))
     }
     
     func checkAuthentication() {

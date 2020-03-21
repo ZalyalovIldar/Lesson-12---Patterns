@@ -20,11 +20,13 @@ class PlacesServiceImpl: PlacesService {
         return decoder
     }()
     
+    var session: URLSession!
+    
     func getPlacesBy(city: String, completion: @escaping (Result<ApiResponse, Error>) -> Void) {
         
         guard let url = URL(string: Endpoints.pointOfInterstUrl(city: city)) else { return }
                         
-        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+        session.dataTask(with: url) { [weak self] data, _, error in
             
             guard let self = self else { return }
             

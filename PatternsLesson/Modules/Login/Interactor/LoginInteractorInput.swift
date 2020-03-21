@@ -13,6 +13,7 @@ protocol LoginInteractorInput: AnyObject {
     /// tells interactor to check if credentials are correct
     /// - Parameter dto: dto to be checked
     func checkCredentials(dto: CredentialsDto)
+    
     /// checks if user is already authenticated
     func checkAuthentication()
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 class SearchPresenter: SearchViewOutput, SearchInteractorOutput {
-        
+    
     weak var view: SearchViewInput!
     var interactor: SearchInteractorInput!
     var dataSource: SearchDataSource!
@@ -41,38 +41,38 @@ class SearchPresenter: SearchViewOutput, SearchInteractorOutput {
     }
     
     //MARK: - Interactor Output
-    func didFinishObtainingPlaces(places: [PlaceResult]) {
+    func didFinishObtainingPlaces(result: Result<ApiResponse, Error>) {
         
-        var models: [PlaceModel] = []
-    
-        for result in places {
+        switch result {
+        case .success(let response):
+            let places = response.results
+            var models: [PlaceModel] = []
             
-            let name = result.name
-            let rating = "Rating: \(result.rating)"
-            var photoUrl = String()
-            
-            if let photo = result.photos?.first {
-                photoUrl = Endpoints.imageUrl(reference: photo.photoReference)
+            for result in places {
+                
+                let name = result.name
+                let rating = "Rating: \(result.rating)"
+                var photoUrl = String()
+                
+                if let photo = result.photos?.first {
+                    photoUrl = Endpoints.imageUrl(reference: photo.photoReference)
+                }
+                
+                models.append(PlaceModel(name: name, rating: rating, photoUrl: photoUrl))
             }
             
-            models.append(PlaceModel(name: name, rating: rating, photoUrl: photoUrl))
+            dataSource.places = models
+            view.reloadData()
+            
+            if !places.isEmpty {
+                view.displayTableView()
+            }
+            else {
+                view.displayNoResultsMessage()
+            }
+        case .failure(let error):
+            router.showErrorAlert(error: error)
         }
-        
-        dataSource.places = models
-        view.reloadData()
-        
-        if !places.isEmpty {
-            view.displayTableView()
-        }
-        else {
-            view.displayNoResultsMessage()
-        }
-    }
-    
-    func finishedObtainingWithError(error: Error) {
-        
-        view.displayInitialMessage()
-        router.showErrorAlert(error: error)
     }
     
     func didFinishLoggingOut() {

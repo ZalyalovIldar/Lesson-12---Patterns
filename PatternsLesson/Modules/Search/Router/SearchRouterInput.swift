@@ -13,6 +13,7 @@ protocol SearchRouterInput: AnyObject {
     /// show alert with error
     /// - Parameter error: error itself
     func showErrorAlert(error: Error)
+    
     /// pops controller 
     func popSearchController()
 }

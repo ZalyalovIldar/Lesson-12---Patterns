@@ -12,10 +12,8 @@ protocol SearchInteractorOutput: AnyObject {
     
     /// tells presenter that places are obtained
     /// - Parameter places: places
-    func didFinishObtainingPlaces(places: [PlaceResult])
-    /// tells presenter that request is finished with error
-    /// - Parameter error: error itself
-    func finishedObtainingWithError(error: Error)
+    func didFinishObtainingPlaces(result: Result<ApiResponse, Error>)
+    
     /// tells presenter that user is logged out now
     func didFinishLoggingOut()
 }

@@ -39,8 +39,8 @@ class LoginPresenter: LoginViewOutput, LoginInteractorOutput {
     }
     
     
-    func didPressLoginButton(dto: CredentialsDto) {
-        interactor.checkCredentials(dto: dto)
+    func didPressLoginButton(credentials: CredentialsDto) {
+        interactor.checkCredentials(dto: credentials)
     }
     
     func viewWillAppear() {

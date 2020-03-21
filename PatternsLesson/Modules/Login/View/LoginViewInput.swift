@@ -13,6 +13,7 @@ protocol LoginViewInput: AnyObject {
     /// tells view to hide or show navigation bar
     /// - Parameter hides: true if navbar should be hidden, false otherwise
     func setHidesNavigationBar(_ hides: Bool)
+    
     /// removes the values from auth fields
     func clearAuthFields()
 }

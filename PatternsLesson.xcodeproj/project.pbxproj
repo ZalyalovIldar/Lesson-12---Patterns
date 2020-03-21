@@ -179,7 +179,6 @@
 		739D740B2423691700251B62 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				739D742024237E0600251B62 /* Entity */,
 				739D740F2423692B00251B62 /* Router */,
 				739D740E2423692600251B62 /* Interactor */,
 				739D740D2423692100251B62 /* Presenter */,
@@ -248,14 +247,6 @@
 				73672BC02425F96300A6694B /* Constants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		739D742024237E0600251B62 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				739D742124237E1500251B62 /* CredentialsDto.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		739D74292423830F00251B62 /* Service */ = {
@@ -352,6 +343,7 @@
 		739D745A2423CBE600251B62 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				739D742124237E1500251B62 /* CredentialsDto.swift */,
 				739D745D2423CC6D00251B62 /* Network */,
 			);
 			path = Entity;

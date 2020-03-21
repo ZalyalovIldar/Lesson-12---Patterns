@@ -11,6 +11,6 @@ import Foundation
 protocol LoginService: AnyObject {
     
     /// tries to log user in, returns boolean that indicates success of the operation
-    /// - Parameter dto: user credentials
-    func login(dto: CredentialsDto) -> Bool
+    /// - Parameter credentials: user credentials
+    func login(credentials: CredentialsDto) -> Bool
 }

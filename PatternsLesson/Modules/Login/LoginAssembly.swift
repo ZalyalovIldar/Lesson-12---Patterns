@@ -33,6 +33,9 @@ class LoginAssembly {
         
         router.view = view
         
+        loginService.userDefaults = UserDefaults.standard
+        authService.userDefaults = UserDefaults.standard
+        
         return view
     }
 }

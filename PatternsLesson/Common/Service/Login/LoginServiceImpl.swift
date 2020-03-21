@@ -10,14 +10,16 @@ import Foundation
 
 class LoginServiceImpl: LoginService {
     
+    var userDefaults: UserDefaults!
+    
     /// hardcoded user
     private let account = CredentialsDto(login: "Login", password: "Password")
     
-    func login(dto: CredentialsDto) -> Bool {
+    func login(credentials: CredentialsDto) -> Bool {
         
-        if dto.login == account.login && dto.password == account.password {
+        if credentials.login == account.login && credentials.password == account.password {
             
-            UserDefaults.standard.set(true, forKey: UserDefaultsKeys.authenticated)
+            userDefaults.set(true, forKey: UserDefaultsKeys.authenticated)
             
             return true
         }

@@ -10,8 +10,16 @@ import Foundation
 
 protocol LoginViewOutput: AnyObject {
     
-    func didPressLoginButton(dto: CredentialsDto)
+    /// tells presenter that login button was pressed
+    /// - Parameter credentials: credentials dto
+    func didPressLoginButton(credentials: CredentialsDto)
+    
+    /// tells presenter to perform initial setup
     func initialSetup()
+    
+    /// tells presenter that view will appear
     func viewWillAppear()
+    
+    /// tells presenter that view will disappear
     func viewWillDisappear()
 }

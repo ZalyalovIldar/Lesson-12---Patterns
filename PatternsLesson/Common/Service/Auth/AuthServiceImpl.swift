@@ -10,7 +10,9 @@ import Foundation
 
 class AuthServiceImpl: AuthService {
     
+    var userDefaults: UserDefaults!
+    
     func isAuthenticated() -> Bool {
-        return UserDefaults.standard.bool(forKey: UserDefaultsKeys.authenticated)
+        return userDefaults.bool(forKey: UserDefaultsKeys.authenticated)
     }
 }

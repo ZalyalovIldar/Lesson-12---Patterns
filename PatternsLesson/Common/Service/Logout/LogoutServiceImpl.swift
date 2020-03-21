@@ -10,7 +10,9 @@ import Foundation
 
 class LogoutServiceImpl: LogoutService {
     
+    var userDefaults: UserDefaults!
+    
     func logout() {
-        UserDefaults.standard.set(false, forKey: UserDefaultsKeys.authenticated)
+        userDefaults.set(false, forKey: UserDefaultsKeys.authenticated)
     }
 }

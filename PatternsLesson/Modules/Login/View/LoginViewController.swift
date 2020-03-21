@@ -33,6 +33,8 @@ class LoginViewController: UIViewController, LoginViewDelegate, LoginViewInput {
     }
     
     override func viewDidLoad() {
+        
+        super.viewDidLoad()
         presenter.initialSetup()
     }
     
@@ -42,7 +44,7 @@ class LoginViewController: UIViewController, LoginViewDelegate, LoginViewInput {
     
     //MARK: - LoginViewDelegate
     func didPressLoginButton(dto: CredentialsDto) {
-        presenter.didPressLoginButton(dto: dto)
+        presenter.didPressLoginButton(credentials: dto)
     }
     
     //MARK: - LoginViewInput

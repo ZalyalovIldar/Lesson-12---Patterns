@@ -12,6 +12,7 @@ protocol LoginRouterInput: AnyObject {
     
     /// navigate to the search controller
     func pushSearchViewController(animated: Bool)
+    
     /// display an alert if credentials are incorrect
     func showWrongCredentialsAlert()
 }
