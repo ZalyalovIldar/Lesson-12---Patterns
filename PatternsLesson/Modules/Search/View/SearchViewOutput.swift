@@ -13,11 +13,14 @@ protocol SearchViewOutput: AnyObject {
     /// tells presenter that particular result was selected
     /// - Parameter cityName: name of the selected city
     func didSelectItem(with cityName: String)
+    
     /// tells presenter to handle the error that occured in autocomplete controller
     /// - Parameter error: error that happened
     func handleError(error: Error)
+    
     /// tells presenter that view needs initial setup
     func initialSetup()
+    
     /// tells presenter that user pressed logout button
     func didPressLogoutButton()
 }
