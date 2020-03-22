@@ -13,6 +13,11 @@
 		423F68B22427799900D61CFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423F68B02427799900D61CFA /* Main.storyboard */; };
 		423F68B42427799A00D61CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423F68B32427799A00D61CFA /* Assets.xcassets */; };
 		423F68B72427799A00D61CFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423F68B52427799A00D61CFA /* LaunchScreen.storyboard */; };
+		4278957C2428004B00A8764E /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4278957B2428004B00A8764E /* AlertService.swift */; };
+		428F659B2427A92E00C44D16 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F659A2427A92E00C44D16 /* LoginProtocols.swift */; };
+		428F659D2427F6F600C44D16 /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F659C2427F6F600C44D16 /* LoginWireFrame.swift */; };
+		428F659F2427F70000C44D16 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F659E2427F70000C44D16 /* LoginInteractor.swift */; };
+		428F65A12427F70800C44D16 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F65A02427F70800C44D16 /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		423F68B32427799A00D61CFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		423F68B62427799A00D61CFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		423F68B82427799A00D61CFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4278957B2428004B00A8764E /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		428F659A2427A92E00C44D16 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		428F659C2427F6F600C44D16 /* LoginWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireFrame.swift; sourceTree = "<group>"; };
+		428F659E2427F70000C44D16 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		428F65A02427F70800C44D16 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 		423F68A92427799900D61CFA /* Lesson_12 */ = {
 			isa = PBXGroup;
 			children = (
+				4278957A2428004000A8764E /* Services */,
+				428F65982427A8D000C44D16 /* Models */,
+				428F658D2427A72000C44D16 /* DataManagers */,
 				428F65822427A63000C44D16 /* Modules */,
 				423F68B02427799900D61CFA /* Main.storyboard */,
 				423F68AA2427799900D61CFA /* AppDelegate.swift */,
@@ -65,6 +78,14 @@
 				423F68B82427799A00D61CFA /* Info.plist */,
 			);
 			path = Lesson_12;
+			sourceTree = "<group>";
+		};
+		4278957A2428004000A8764E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4278957B2428004B00A8764E /* AlertService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		428F65822427A63000C44D16 /* Modules */ = {
@@ -79,7 +100,7 @@
 		428F65832427A63900C44D16 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				428F658E2427A72700C44D16 /* Protocols */,
+				428F65992427A8E700C44D16 /* Protocols */,
 				428F65882427A6C900C44D16 /* WireFrame */,
 				428F65872427A6C200C44D16 /* Interactor */,
 				428F65862427A67000C44D16 /* Presenter */,
@@ -91,7 +112,6 @@
 		428F65842427A65100C44D16 /* SearchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				428F658D2427A72000C44D16 /* Protocols */,
 				428F65892427A6F000C44D16 /* WireFrame */,
 				428F658A2427A6F600C44D16 /* Interactor */,
 				428F658B2427A6FC00C44D16 /* Presenter */,
@@ -111,6 +131,7 @@
 		428F65862427A67000C44D16 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				428F65A02427F70800C44D16 /* LoginPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -118,6 +139,7 @@
 		428F65872427A6C200C44D16 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				428F659E2427F70000C44D16 /* LoginInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -125,6 +147,7 @@
 		428F65882427A6C900C44D16 /* WireFrame */ = {
 			isa = PBXGroup;
 			children = (
+				428F659C2427F6F600C44D16 /* LoginWireFrame.swift */,
 			);
 			path = WireFrame;
 			sourceTree = "<group>";
@@ -157,16 +180,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		428F658D2427A72000C44D16 /* Protocols */ = {
+		428F658D2427A72000C44D16 /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Protocols;
+			path = DataManagers;
 			sourceTree = "<group>";
 		};
-		428F658E2427A72700C44D16 /* Protocols */ = {
+		428F65982427A8D000C44D16 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		428F65992427A8E700C44D16 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				428F659A2427A92E00C44D16 /* LoginProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -243,8 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				423F68AF2427799900D61CFA /* LoginView.swift in Sources */,
+				428F659B2427A92E00C44D16 /* LoginProtocols.swift in Sources */,
+				428F65A12427F70800C44D16 /* LoginPresenter.swift in Sources */,
+				428F659F2427F70000C44D16 /* LoginInteractor.swift in Sources */,
 				423F68AB2427799900D61CFA /* AppDelegate.swift in Sources */,
 				423F68AD2427799900D61CFA /* SceneDelegate.swift in Sources */,
+				4278957C2428004B00A8764E /* AlertService.swift in Sources */,
+				428F659D2427F6F600C44D16 /* LoginWireFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

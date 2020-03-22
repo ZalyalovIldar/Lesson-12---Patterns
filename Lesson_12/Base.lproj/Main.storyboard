@@ -7,48 +7,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Lesson_12" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="BYZ-38-t0r" customClass="LoginView" customModule="Lesson_12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aa0-x3-fky">
-                                <rect key="frame" x="50" y="337.66666666666669" width="314" height="61"/>
+                                <rect key="frame" x="50" y="327.66666666666669" width="314" height="81"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u3Z-Z4-aER">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="61"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="81"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8sl-IN-MZm">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="WvT-sV-Rcf"/>
+                                                    <constraint firstAttribute="height" constant="40" id="WvT-sV-Rcf"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ru3-x1-1Qz" userLabel="SeparatorView">
-                                                <rect key="frame" x="0.0" y="30" width="314" height="1"/>
+                                                <rect key="frame" x="0.0" y="40" width="314" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="SOX-ac-oMn"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAI-3R-wu9">
-                                                <rect key="frame" x="0.0" y="31" width="314" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAI-3R-wu9">
+                                                <rect key="frame" x="0.0" y="41" width="314" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="XeA-HK-qjs"/>
+                                                    <constraint firstAttribute="height" constant="40" id="XeA-HK-qjs"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="8sl-IN-MZm" secondAttribute="trailing" id="Fr7-zz-Vgq"/>
-                                            <constraint firstAttribute="trailing" secondItem="MAI-3R-wu9" secondAttribute="trailing" id="ZM0-OT-Kjs"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -59,16 +55,35 @@
                                     <constraint firstAttribute="trailing" secondItem="u3Z-Z4-aER" secondAttribute="trailing" id="vyX-fG-g61"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LN3-RY-X73">
+                                <rect key="frame" x="142" y="544" width="130" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="XL8-VZ-5Wj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="0.1959522367" green="0.37082746620000001" blue="0.54181623459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGoButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnX-sd-vnd"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.1959522367" green="0.37082746620000001" blue="0.54181623459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aa0-x3-fky" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AaO-yz-OSb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aa0-x3-fky" secondAttribute="trailing" constant="50" id="Acw-ij-nNK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LN3-RY-X73" secondAttribute="bottom" constant="150" id="JPy-9A-ite"/>
+                            <constraint firstItem="LN3-RY-X73" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tki-ZS-5f1"/>
                             <constraint firstItem="aa0-x3-fky" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="laH-x4-7Oi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="goButton" destination="LN3-RY-X73" id="lt1-CV-tlA"/>
+                        <outlet property="loginTextField" destination="8sl-IN-MZm" id="YDk-LX-0AM"/>
+                        <outlet property="passwordTextField" destination="MAI-3R-wu9" id="NS1-tF-erh"/>
                         <outlet property="textFieldsView" destination="aa0-x3-fky" id="aJJ-CS-uJ7"/>
                     </connections>
                 </viewController>
