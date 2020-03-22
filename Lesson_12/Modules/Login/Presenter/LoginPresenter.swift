@@ -22,8 +22,7 @@ class LoginPresenter: LoginPresenterProtocol {
     func onLoginButtonPressed(login: String, password: String) {
         
         if interactor.isCorrectCridentials(login: login, password: password) {
-            
-            //wireframe.createSearchModule
+            wireFrame.presentSearchScreen()
         } else {
             view.showError(errorMessage: Constants.invalidCridentialsErrorMessage)
         }

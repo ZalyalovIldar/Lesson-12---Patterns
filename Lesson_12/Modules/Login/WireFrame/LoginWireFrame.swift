@@ -33,6 +33,7 @@ class LoginWireFrame: LoginWireFrameProtocol {
     
     func presentSearchScreen() {
         
-        //let searchScreen = SearchWireFrame.createSearchModule
+        let searchScreen = SearchWireFrame.createSearchModule()
+        UIApplication.setRootView(searchScreen)
     }
 }

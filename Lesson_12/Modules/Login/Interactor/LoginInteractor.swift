@@ -10,6 +10,6 @@ class LoginInteractor: LoginInteractorProtocol {
     
     func isCorrectCridentials(login: String, password: String) -> Bool {
         
-        return login == "login" && password == "password"
+        return (login == "login" && password == "password")
     }
 }

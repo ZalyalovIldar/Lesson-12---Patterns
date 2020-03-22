@@ -91,5 +91,39 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.58695652173915"/>
         </scene>
+        <!--Places-->
+        <scene sceneID="iKg-rv-sbn">
+            <objects>
+                <viewController id="gtD-sm-obV" customClass="SearchView" customModule="Lesson_12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OkV-5p-48q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2XI-uN-gWA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Places" id="vak-J5-1bx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xge-KR-a8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="833"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q9K-gv-rSg">
+            <objects>
+                <navigationController storyboardIdentifier="searchNavController" automaticallyAdjustsScrollViewInsets="NO" id="Vzw-96-kuI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JB3-n7-b4K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gtD-sm-obV" kind="relationship" relationship="rootViewController" id="j3f-Sv-scL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hat-Tq-K5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="833"/>
+        </scene>
     </scenes>
 </document>
