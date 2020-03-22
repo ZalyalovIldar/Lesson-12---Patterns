@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  PatternsLesson
+//  Lesson_12
 //
-//  Created by Ильдар Залялов on 16.03.2020.
-//  Copyright © 2020 Ildar Zalyalov. All rights reserved.
+//  Created by Никита Лужбин on 22.03.2020.
+//  Copyright © 2020 Никита. All rights reserved.
 //
 
 import UIKit
