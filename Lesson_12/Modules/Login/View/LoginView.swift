@@ -46,7 +46,7 @@ class LoginView: UIViewController, LoginViewProtocol {
     @IBAction func onGoButtonTouchUpInside(_ sender: Any) {
         
         guard let login = loginTextField.text else { return }
-        guard let password = loginTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
         
         presenter.onLoginButtonPressed(login: login, password: password)
     }
