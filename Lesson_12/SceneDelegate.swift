@@ -7,7 +7,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        window?.rootViewController = LoginWireFrame.createLoginModule()
+        if UserDefaultsManager.shared.isAllreadyRegistered() {
+            window?.rootViewController = SearchWireFrame.createSearchModule()
+        } else {
+            window?.rootViewController = LoginWireFrame.createLoginModule()
+        }
     }
 }
 

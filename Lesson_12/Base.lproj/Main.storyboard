@@ -101,7 +101,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2XI-uN-gWA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Places" id="vak-J5-1bx"/>
+                    <navigationItem key="navigationItem" title="Places" id="vak-J5-1bx">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="logoutIcon" id="lds-VU-Xa9">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogoutButtonTouchUpInside:" destination="gtD-sm-obV" id="G3O-eD-vtQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xge-KR-a8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,4 +133,7 @@
             <point key="canvasLocation" x="138" y="833"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logoutIcon" width="27" height="27"/>
+    </resources>
 </document>
