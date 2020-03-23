@@ -258,11 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				7C03F7B0241F9D78009204A1 /* PatternsLesson */,
-				7C03F7B1241F9D78009204A1 /* AppDelegate.swift */,
-				7C03F7B3241F9D78009204A1 /* SceneDelegate.swift */,
-				7C03F7BA241F9D79009204A1 /* Assets.xcassets */,
-				7C03F7BC241F9D79009204A1 /* LaunchScreen.storyboard */,
-				7C03F7BF241F9D79009204A1 /* Info.plist */,
 				7C03F7AF241F9D78009204A1 /* Products */,
 				CE6B4F5025CB6923B98AD08C /* Pods */,
 				2764E8A272BDCF7211612A26 /* Frameworks */,
@@ -285,6 +280,11 @@
 				29775587242950C700601BE6 /* Helper */,
 				29F4D1112427942E007DA8DC /* Manager */,
 				29F4D11624279646007DA8DC /* Modules */,
+				7C03F7B1241F9D78009204A1 /* AppDelegate.swift */,
+				7C03F7B3241F9D78009204A1 /* SceneDelegate.swift */,
+				7C03F7BA241F9D79009204A1 /* Assets.xcassets */,
+				7C03F7BC241F9D79009204A1 /* LaunchScreen.storyboard */,
+				7C03F7BF241F9D79009204A1 /* Info.plist */,
 			);
 			path = PatternsLesson;
 			sourceTree = "<group>";
@@ -657,7 +657,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M2992GT752;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PatternsLesson/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,7 +676,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M2992GT752;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PatternsLesson/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
